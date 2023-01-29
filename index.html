@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hello, world!</title>
+  </head>
+  <body style="display: flex; justify-content: center; background-color: #242424;">
+    
+    
+    <div id="signup" class="col-md-5 m-5 p-4 border rounded">
+      <h2 class="mb-3 text-warning">Coding Wallet</h2>
+      <div>
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-white" id="name" placeholder="Full Name">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Invalid Name
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-white" id="cf" placeholder="Codeforces Username">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Invalid Name
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-white" id="cc" placeholder="Codechef Username">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Invalid Name
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-white" id="lc" placeholder="Leetcode Username">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Invalid Name
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-white" id="gfg" placeholder="GeeksforGeeks Username">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Invalid Name
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-white" id="hr" placeholder="Hackerrank Username">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Invalid Name
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-white" id="he" placeholder="Hackerearth Username">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Invalid Name
+          </div>
+        </div>
+        <div class="mb-3">
+          <input type="text" class="form-control bg-dark text-white" id="cs" placeholder="Codestudio Username">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
+          <div class="invalid-feedback">
+            Invalid Name
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-warning" onclick="helper()" >Submit form</button>
+    </div>
+    
+    <div id="info">
+      <div class="box mt-5">
+        <h1 id="myname">Aman Saxena</h1>
+        <div class="header-box">
+          <h2 id="total" class="total">--</h2>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div class="card" id="lccard">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <h3 class="card-title">Leetcode</h3>
+            <img
+              style="background-color: white; border-radius: 10px"
+              width="60px"
+              src="icons/leetcode.jpg"
+              alt="leetcode"
+            />
+          </div>
+          <p id="leetcode" class="card-content">--</p>
+          <button
+            onclick="visitURL('lc')"
+            class="card-btn"
+          >
+            Visit ➜
+          </button>
+        </div>
+        <div class="card" id="cfcard">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <h3 class="card-title">Codeforces</h3>
+            <img
+              style="border-radius: 10px"
+              src="icons/codeforces.jpg"
+              alt="codeforces"
+              width="60px"
+            />
+          </div>
+          <p id="codeforces" class="card-content">--</p>
+          <button
+            onclick="visitURL('cf')"
+            class="card-btn"
+          >
+            Visit ➜
+          </button>
+        </div>
+        <div class="card" id="cccard">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <h3 class="card-title">Codechef</h3>
+            <img
+              style="border-radius: 10px"
+              src="icons/codechef.jpg"
+              alt="codechef"
+              width="60px"
+            />
+          </div>
+          <p id="codechef" class="card-content">--</p>
+          <button
+            onclick="visitURL('cc')"
+            class="card-btn"
+          >
+            Visit ➜
+          </button>
+        </div>
+        <div class="card" id="gfgcard">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <h3 class="card-title">GFG</h3>
+            <img
+              style="border-radius: 10px"
+              src="icons/gfg.jpg"
+              width="60px"
+              alt="gfg"
+            />
+          </div>
+          <p id="gfg" class="card-content">--</p>
+          <button
+            onclick="visitURL('gfg')"
+            class="card-btn"
+          >
+            Visit ➜
+          </button>
+        </div>
+        <div class="card" id="hrcard">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <h3 class="card-title">Hackerrank</h3>
+            <img
+              style="border-radius: 10px"
+              src="icons/hackerrank.jpg"
+              width="60px"
+              alt="hackerrank"
+            />
+          </div>
+          <p id="hackerrank" class="card-content">--</p>
+          <button
+            onclick="visitURL(hr)"
+            class="card-btn"
+          >
+            Visit ➜
+          </button>
+        </div>
+        <div class="card" id="cscard">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <h3 class="card-title">Code Studio</h3>
+            <img
+              style="border-radius: 10px"
+              src="icons/codestudio.jpg"
+              width="60px"
+              alt="codestudio"
+            />
+          </div>
+          <p id="codestudio" class="card-content">--</p>
+          <button
+            onclick="visitURL('cs')"
+            class="card-btn"
+          >
+            Visit ➜
+          </button>
+        </div>
+        <div class="card" id="hecard">
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            "
+          >
+            <h3 class="card-title">Hackerearth</h3>
+            <img
+              style="border-radius: 10px"
+              src="icons/hackerearth.jpg"
+              width="60px"
+              alt="codestudio"
+            />
+          </div>
+          <p id="hackerearth" class="card-content">--</p>
+          <button
+            onclick="visitURL('he')"
+            class="card-btn"
+          >
+            Visit ➜
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
